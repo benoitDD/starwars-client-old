@@ -30,6 +30,7 @@
     "apollo-link-http": "1.5.14",
     "apollo-upload-client": "10.0.0",
     "core-js": "3.0.1",
+    "express": "4.16.4",
     "graphql": "14.2.1",
     "graphql-tag": "2.10.1",
     "i18next": "15.1.0",
