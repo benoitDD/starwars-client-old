@@ -1,0 +1,47 @@
+@import './commun.scss'
+
+#signin
+    height: 60vh
+    display: flex
+
+    #signin_form
+        width: 600px
+        margin: auto
+
+        #signin_message_outside
+            font-size: 1.3em
+
+        #signin_error
+            color: red
+
+        h1
+            text-align: center
+
+        div
+            display: flex
+            @media screen and (max-width: $nav_screen_2)
+                flex-direction: column
+            margin-bottom: 20px
+
+            label
+                display: inline-block
+                width: 150px
+
+        #signin_button
+            justify-content: center
+
+            button
+                background-color: rgb(199, 34, 34)
+                border: 0px
+                border-radius: 5px
+                width: 120px
+                height: 30px
+                cursor: pointer
+                color: $color
+
+@at-root
+    #signin_login, #signin_password
+        width: calc(100% - 15px)
+        padding-left: 15px
+        height: 30px
+        border-radius: 5px

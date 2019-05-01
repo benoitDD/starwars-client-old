@@ -1,0 +1,43 @@
+@import './commun'
+
+body
+    font-family:  "Comic Sans MS"
+    margin-top: 0px
+    background-image: url('../images/background.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-attachment: fixed
+    min-width: $min_width_screen
+
+    #app_loading
+        position: fixed
+        top: calc(50% - 50px)
+        left: calc(50% - 50px)
+
+    #container_sections
+        position: relative
+        padding-top: 20px
+        display: flex
+        flex-direction: row
+        color: $color
+
+        #left_menu
+            @media screen and (min-width: $nav_screen_2)
+                width: 20%
+            @media screen and (max-width: $nav_screen_2)
+                position: absolute
+                width: 100%
+                background-color: rgba(100, 50, 50, 0.774)
+                border-radius: 10px
+                z-index: 50
+
+        #section
+            max-width: 1000px
+            @media screen and (min-width: $nav_screen_2)
+                width: 80%
+                padding-left: 25px
+            @media screen and (max-width: $nav_screen_2)
+                width: 100%
+                margin-left: auto
+                margin-right: auto
+                

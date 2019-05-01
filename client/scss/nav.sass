@@ -1,0 +1,95 @@
+@import './commun'
+
+#nav
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    background-color: $nav_background_color
+    @media screen and (min-width: $nav_screen_1)
+        height: $nav_screen_large_height
+    margin-left: -8px
+    margin-right: -8px
+    white-space: nowrap
+    @media screen and (max-width: $nav_screen_1)
+        flex-wrap: wrap  
+        height: $nav_screen_small_height
+    a
+        text-decoration: none
+        color: $color
+
+    #brand
+        text-align: center
+        @media screen and (min-width: $nav_screen_1)
+            margin-left: 50px
+        @media screen and (max-width: $nav_screen_1)
+            width: 100%
+        a
+            @media screen and (max-width: $nav_screen_1)
+                margin: 0px
+    div
+        a
+            @media screen and (min-width: $nav_screen_3)
+                margin-right: 20px
+                margin-left: 20px
+            @media screen and (max-width: $nav_screen_3)
+                margin-right: 7px
+                margin-left: 7px
+            font-size: 1.2em
+            text-decoration: none
+            color: $color
+
+        .active 
+            color: red
+
+        #nav_objets
+            @media screen and (max-width: $nav_screen_2)
+                display: none
+
+        #nav_objets_dropdown
+            position: relative
+            margin-left: 10px
+            .dropdown_header
+                height: $nav_screen_large_height
+                display: flex
+                align-items: center
+                .icon_menu_bar
+                    background-color: $color 
+            .dropdown_body
+                display: flex
+                flex-direction: column
+                position: absolute
+                background-color: $nav_background_color
+                z-index: 100
+            @media screen and (min-width: $nav_screen_2 + 1)
+                display: none
+
+    #nav_right
+        display: flex
+        flex-direction: row
+        align-items: center
+        @media screen and (max-width: $nav_screen_2)
+            align-self: flex-start
+        #sign_in_link
+            @media screen and (max-width: $nav_screen_3)
+                background: url('../images/signin.png') no-repeat
+                background-size: cover
+                height: 30px
+                width: 30px
+                background-color: white
+                border-radius: 5px
+            span
+                @media screen and (max-width: $nav_screen_3)
+                    display: none
+
+        #sign_up_link
+            @media screen and (max-width: $nav_screen_3)
+                background: url('../images/signup.png') no-repeat
+                background-size: cover
+                height: 30px
+                width: 30px
+                background-color: white
+                border-radius: 5px
+            span
+                @media screen and (max-width: $nav_screen_3)
+                    display: none

@@ -1,0 +1,37 @@
+@import './commun'
+
+.attributes_container
+    .attributes_title
+        margin-top: 0px
+        margin-bottom: 5px
+        font-size: 1.3em
+
+    .attributes
+        border: solid 1px rgb(240, 230, 230)
+        border-radius: 5px
+        padding: 10px
+        margin: 0px
+
+        .helper
+            cursor: help
+
+        li
+            list-style: none
+            display: flex
+            @media screen and (min-width: $nav_screen_3 + 1)
+                flex-direction: row
+            @media screen and (max-width: $nav_screen_3)
+                flex-direction: column
+                margin-bottom: 10px
+
+            .attribute
+                margin-right: 10px
+                width: 200px
+                @media screen and (max-width: $nav_screen_3)
+                    font-size: 1.2em
+                    font-weight: 900
+            .attribute_value
+                @media screen and (max-width: $nav_screen_3)
+                    margin-left: 10px
+                .attributes_unit
+                    margin-left: 5px

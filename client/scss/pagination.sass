@@ -1,0 +1,49 @@
+@import './commun'
+
+.pagination
+    .pagination_list
+        @media screen and (max-width: $nav_screen_2)
+            padding-left: 10px
+        .pagination_list_item
+            list-style: none
+            padding-bottom: 5px
+
+    .pagination_header
+        display: flex
+        @media screen and (min-width: $nav_screen_2 + 1)
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+        @media screen and (max-width: $nav_screen_2)
+            flex-direction: column
+
+        div
+            @media screen and (max-width: $nav_screen_2)
+                margin-bottom: 5px
+
+        .pagination_action
+            .disabled
+                background-color: rgb(189, 180, 180)
+                cursor: initial
+            
+            button
+                color: $color
+                background-color: rgb(24, 73, 209)
+                border-radius: 5px
+                border: 0px
+                height: 30px
+                cursor: pointer
+                width: 70px
+
+            button:first-child
+                border-top-right-radius: 0px
+                border-bottom-right-radius: 0px
+                
+            button:last-child
+                border-top-left-radius: 0px
+                border-bottom-left-radius: 0px
+
+@at-root 
+    .pagination_loading
+        margin: auto
+        text-align: center

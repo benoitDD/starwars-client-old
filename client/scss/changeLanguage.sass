@@ -1,0 +1,27 @@
+@import './commun.scss'
+
+$min-width: 120px
+
+.changeLanguage
+    color: $color
+    margin-right: 10px
+    @media screen and (min-width: $nav_screen_3 + 1)
+        min-width: $min-width
+
+    .changeLanguage_label
+        @media screen and (max-width: $nav_screen_3)
+            display: none
+
+    img 
+        height: $nav_screen_large_height
+
+    .changeLanguage_langage
+        display: flex
+        flex-direction: row
+        align-items: center
+
+    .dropdown_body 
+        position: absolute
+        z-index: 100
+        background-color: $nav_background_color
+        min-width: $min-width

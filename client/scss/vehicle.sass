@@ -1,0 +1,27 @@
+@import './commun.scss'
+.vehicle
+  .vehicle_name
+    margin-top: 0px
+  .images
+    margin-bottom: 10px
+
+  #vehicle_properties
+    display: flex
+    @media screen and (min-width: $nav_screen_3 + 1)
+      flex-direction: row
+      justify-content: space-around
+    @media screen and (max-width: $nav_screen_3)
+      flex-direction: column
+
+    .vehicle_properties_sections
+      display: flex
+      flex-direction: column
+
+      .vehicle_properties_section
+        margin-bottom: 20px
+  
+@at-root 
+  #vehicle_loading
+    position: fixed
+    top: calc(50% - 50px)
+    left: calc(50% - 50px)

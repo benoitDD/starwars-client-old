@@ -1,0 +1,46 @@
+@import './commun.scss'
+
+$radius: 10px
+$height: 25px
+
+#search
+    #search_results
+        padding-left: 10px
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        .search_type
+            padding: 5px
+            h1
+                font-size: 1.2em
+                margin-top: 10px
+                margin-bottom: 2px
+            ul
+                margin: 0px
+                @media screen and (max-width: $nav_screen_2)
+                    padding-left: 10px
+                li
+                    list-style: none
+                    font-size: 0.9em
+
+    #search_form
+        display: flex
+        flex-direction: row
+
+        input
+            width: 100%
+            padding-right: 0px
+            border: 0px
+            padding-left: 8px
+            border-top-left-radius: $radius
+            border-bottom-left-radius: $radius
+            height: $height
+        
+        button
+            border: 0px
+            background-color: rgb(39, 41, 160)
+            color: $color
+            border-top-right-radius: $radius
+            border-bottom-right-radius: $radius
+            height: $height
+            cursor: pointer
