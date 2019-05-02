@@ -4,6 +4,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv')
 
+console.log(process.argv);
+
+
 module.exports = () => {
   const result = dotenv.config({ path: __dirname + '/client/.env' })
   if (result.error) {

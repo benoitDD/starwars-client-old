@@ -10,6 +10,7 @@
     "start": "node server/lib",
     "compile": "babel server/src --out-dir server/lib",
     "build": "webpack",
+    "build-local": "webpack --config webpack-local.config.js",
     "heroku-postbuild": "npm run build && npm run compile",
     "fragments": "babel-node client/fetchFragmentsTypes.js"
   },
