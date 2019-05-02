@@ -5,7 +5,7 @@ app.use(express.static(__dirname + '/../public'))
 
 app.use((req, res, next) => {
   //If they don't request a specific file (with a dot) we send the application client
-  if(req.method === 'GET' && (!req.pathname || !req.pathname.includes('.'))){
+  if(req.method === 'GET' && (!req.url || !req.url.includes('.'))){
     res.sendFile('index.html', {root: './server/public'})
     return
   }
